@@ -1,0 +1,52 @@
+{
+  "name": "babel-plugin-jsx-imports",
+  "version": "1.0.0",
+  "description": "Automatically add the necessary imports when a file contains JSX",
+  "author": "Jonathan Neal <jonathantneal@hotmail.com>",
+  "license": "CC0-1.0",
+  "repository": "jonathantneal/babel-plugin-jsx-imports",
+  "homepage": "https://github.com/jonathantneal/babel-plugin-jsx-imports#readme",
+  "bugs": "https://github.com/jonathantneal/babel-plugin-jsx-imports/issues",
+  "main": "index.js",
+  "module": "index.mjs",
+  "files": [
+    "index.js",
+    "index.js.map",
+    "index.mjs",
+    "index.mjs.map"
+  ],
+  "scripts": {
+    "build": "rollup --config --silent",
+    "prepublishOnly": "npm test && npm run build",
+    "pretest:tape": "npm run build",
+    "test": "npm run test:js && npm run test:tape",
+    "test:js": "eslint src/*.js src/**/*.js --cache --ignore-path .gitignore --quiet",
+    "test:tape": "node test"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.5.4",
+    "@babel/plugin-transform-react-jsx": "^7.3.0",
+    "@babel/preset-env": "^7.5.4",
+    "babel-eslint": "^10.0.2",
+    "eslint": "^6.0.1",
+    "pre-commit": "^1.2.2",
+    "rollup": "^1.16.7",
+    "rollup-plugin-babel": "^4.3.3"
+  },
+  "keywords": [
+    "javascript",
+    "node",
+    "babel",
+    "babel-plugin",
+    "function",
+    "wrap",
+    "esm",
+    "cjs",
+    "iife",
+    "global"
+  ]
+}
